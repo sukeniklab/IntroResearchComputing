@@ -4,7 +4,7 @@
 ```bash
 mkdir CALVADOS
 ```
-*** examples in this directory assume the path /home/{username}/CALVADOS ***
+*** examples in this directory assume the path `/home/{username}/CALVADOS` ***
 
 ---
 
@@ -33,7 +33,7 @@ conda activate modeller_env
 condor_submit run_modeller.sub
 ```
 
-This will generate 3 (modify in generate_initStructure.py, line 28) initial conformations and move them to ../src/starting
+This will generate 3 (modify in `generate_initStructure.py`, line 28) initial conformations and move them to `../src/starting`
 
 ---
 
@@ -50,7 +50,7 @@ Check to make sure the starting structures are present:
 ```bash
 ls starting/
 ```
-make sure that the domains for your protein are included in single_IDR.py: 
+make sure that the domains for your protein are included in `single_IDR.py`: 
 ```bash
 vim single_IDR.py
 ```
@@ -68,4 +68,4 @@ condor_submit submit_calvados_job.sub
 ---
 
 ### 5. Output 
-Simulations will be in CALVADOS3COM_2.0_MD_gpu_trial{trial}_{sequence_name} located in the src directory.
+Simulations will be in `CALVADOS3COM_2.0_MD_gpu_trial{trial}_{sequence_name}` located in the src directory.
