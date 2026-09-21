@@ -5,7 +5,7 @@ This repository contains working pipelines and a detailed [Wiki](https://github.
 If you're not sure whether you even need any of this, start with the [Home page](../../wiki/Home), it has a short checklist for "when should I start using computing resources?"
 
 # Where to start
-If you are looking to get started
+If you are looking to get started, look at different examples to figure out what suits your needs and pull one of the `.sub` files.
 
 # Example pipelines
 
