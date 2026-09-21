@@ -11,6 +11,7 @@ If you are looking to get started, look at different examples to figure out what
 
 The [`OrangeGridPipelines/`](OrangeGridPipelines) folder has complete, working `.sub` and `.sh` files you can copy directly and adjust for your own data. 
   - **[`esm_embed/`](OrangeGridPipelines/esm_embed)** — generating ESM2 protein embeddings, one job per FASTA file
+  - **[`batch_nardini/`	](OrangeGridPipelines/batch_nardini)** - generate sequence parameters, submits one job per sequence from a single-column file
   - **[`CALVADOS/`](OrangeGridPipelines/CALVADOS)** — sweeping multiple variables (e.g. replicates × constructs) from a file
 
 
