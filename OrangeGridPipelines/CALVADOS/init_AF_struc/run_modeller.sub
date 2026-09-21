@@ -1,0 +1,16 @@
+environment = "HOME=$ENV(HOME)"
+executable = $ENV(HOME)/CALVADOS/src/init_AF_struc/run_modeller.sh
+arguments  = $(pdb_file)
+
+request_cpus   = 4
+request_memory = 8GB
+request_disk   = 5GB
+
+requirements = (Machine != "CRUSH-NODE-10-5-5-5")
+
+
+output = $ENV(HOME)/CALVADOS/init_AF_struc/logs/modeller_$(Cluster)_$(Process).out
+error  = $ENV(HOME)/CALVADOS/init_AF_struc/logs/modeller_$(Cluster)_$(Process).err
+log    = $ENV(HOME)/CALVADOS/init_AF_struc/logs/modeller_$(Cluster)_$(Process).log
+
+queue pdb_file matching $ENV(HOME)/CALVADOS/src/starting/*.pdb

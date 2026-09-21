@@ -1,0 +1,18 @@
+environment = "HOME=$ENV(HOME)"
+executable   = $ENV(HOME)/CALVADOS/run_calvados.sh
+arguments    = $(trial) $(protein)
+
+output       = logs/$(protein)_$(trial).out
+error        = logs/$(protein)_$(trial).err
+log          = logs/$(protein)_$(trial).log
+
+# GPU requirements (matching your working example)
+Requirements = CUDADriverVersion >= 12.0 && (Machine != "CRUSH-NODE-10-5-5-5")
++request_gpus = 1
+
+# CPU/Memory requests
+request_cpus   = 16
+request_memory = 16GB
+
+# Queue jobs from file
+queue trial,protein from trials_proteins.txt 

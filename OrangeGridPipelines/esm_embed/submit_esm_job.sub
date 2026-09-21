@@ -1,0 +1,17 @@
+environment = "HOME=$ENV(HOME)"
+executable = $ENV(HOME)/esm_embed/run_esm2_to_embed.sh
+arguments  = $(fasta_file)
+
+request_gpus   = 1
++request_gpus  = 1
+request_cpus   = 6
+request_memory = 20GB
+request_disk   = 5GB
+
+requirements = (CUDACapability >= 6.0) && (Machine != "CRUSH-NODE-10-5-5-5")
+
+output = $ENV(HOME)/esm_embed/logs/esm2_$(Cluster)_$(Process).out
+error  = $ENV(HOME)/esm_embed/logs/esm2_$(Cluster)_$(Process).err
+log    = $ENV(HOME)/esm_embed/logs/esm2_$(Cluster)_$(Process).log
+
+queue fasta_file matching $ENV(HOME)/esm_embed/fastas/to_run/*.fasta
