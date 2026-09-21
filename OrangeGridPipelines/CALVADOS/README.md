@@ -1,4 +1,4 @@
-## Running multi-protein simulations with CALVADOS
+## Running multi-domain protein simulations with CALVADOS
 
 ### 1. Set up your directory that you're going to work in 
 ```bash
