@@ -1,0 +1,16 @@
+environment  = "HOME=$ENV(HOME)"
+executable   = $ENV(HOME)/batch_nardini/run_calc_features_single.sh
+
+arguments    = "$(protein_name)"
+
+request_cpus   = 1
+request_memory = 4GB
+request_disk   = 2GB
+
+
+output = $ENV(HOME)/batch_nardini/logs/features_$(Cluster)_$(Process).out
+error  = $ENV(HOME)/batch_nardini/logs/features_$(Cluster)_$(Process).err
+log    = $ENV(HOME)/batch_nardini/logs/features_$(Cluster)_$(Process).log
+
+queue protein_name from job_list.txt
+

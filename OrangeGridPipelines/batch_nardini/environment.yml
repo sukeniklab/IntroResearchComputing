@@ -1,0 +1,11 @@
+name: nardini_features
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+dependencies:
+  - numpy
+  - pandas
+  - ipywidgets
+  - pip 
+  
