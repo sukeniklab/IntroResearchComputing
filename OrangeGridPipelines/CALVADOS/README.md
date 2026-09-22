@@ -3,6 +3,7 @@
 ### 1. Set up your directory that you're going to work in 
 ```bash
 mkdir CALVADOS
+mkdir CALVADOS/init_AD_struc
 ```
 *** examples in this directory assume the path `/home/{username}/CALVADOS` ***
 
